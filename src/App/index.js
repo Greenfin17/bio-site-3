@@ -1,37 +1,42 @@
-import React, { useState } from 'react';
-import './App.scss';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import firebase from 'firebase';
+import NavBar from '../components/Navbar';
+import Routes from '../helpers/Routes';
+import getProjects from '../helpers/data/projects';
 
 function App() {
-  const [domWriting, setDomWriting] = useState('Nothing Here!');
+  const [projects, setProjects] = useState([]);
+  const [user, setUser] = useState(null);
 
-  const handleClick = (e) => {
-    console.warn(`You clicked ${e.target.id}`);
-    setDomWriting(`You clicked ${e.target.id}! Check the Console!`);
-  };
+  useEffect(() => {
+    getProjects().then((response) => setProjects(response));
+  }, []);
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((authed) => {
+      if (authed) {
+        const userInfoObj = {
+          fullName: authed.displayName,
+          profileImage: authed.photoURL,
+          uid: authed.uid,
+          username: authed.email.split('@')[0]
+        };
+        setUser(userInfoObj);
+      } else if (user || user === null) {
+        setUser(false);
+      }
+    });
+  }, []);
 
   return (
-    <div className='App'>
-      <h2>INSIDE APP COMPONENT</h2>
-      <div>
-        <button
-          id='this-button'
-          className='btn btn-info'
-          onClick={handleClick}
-        >
-          I am THIS button
-        </button>
-      </div>
-      <div>
-        <button
-          id='that-button'
-          className='btn btn-primary mt-3'
-          onClick={handleClick}
-        >
-          I am THAT button
-        </button>
-      </div>
-      <h3>{domWriting}</h3>
-    </div>
+    <>
+      <Router>
+        <NavBar user={user}
+        projects={projects}
+          routes={Routes} />
+      </Router>
+    </>
   );
 }
 
