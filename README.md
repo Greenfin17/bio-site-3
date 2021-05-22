@@ -1,7 +1,5 @@
 # React Template
 
-**Use this template to get up and running quickly on projects.**
+**Figma
+https://www.figma.com/file/JSQ73OyC7IXaUGnMIdpFTJ/BioSite?node-id=0%3A1&frame-preset-name=Desktop
 
-This is just like the webpack template. Use it, create the repo, connect it to your local and `npm i`.
-
-- [Steps to deploy](https://github.com/nss-nightclass-projects/REACT-Deployment-Netlify)
