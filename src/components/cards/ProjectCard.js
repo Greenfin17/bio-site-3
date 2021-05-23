@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ProjectCard = ({ item }) => (
-  <div className='card my-2' style={ width: '8rem' } id={item.index}>
+  <div className='card my-2' style={{ width: '16rem' }} id={item.index}>
     <div className='card-body'>
       <p className='card-text project-title'>{item.title}</p>
       <img className='img-container' src={item.screenshot} alt={item.altText} />
@@ -19,4 +19,4 @@ ProjectCard.propTypes = {
   item: PropTypes.object
 };
 
-export default projectCard;
+export default ProjectCard;

@@ -7,6 +7,7 @@ import {
   NavbarToggler,
   Collapse,
   NavItem,
+  NavLink,
   Button
 } from 'reactstrap';
 import { signOutUser } from '../helpers/auth';
@@ -33,10 +34,13 @@ const NavBar = ({
         <Collapse className='bio-nav-collapse' isOpen={isOpen} navbar>
           <Nav className='mr-auto bio-ul' navbar>
             <NavItem>
-              <Link className='nav-link' to='/'>About Me</Link>
+              <NavLink className='nav-link' href='#about-heading'>About Me</NavLink>
             </NavItem>
             <NavItem>
-              <Link className='nav-link' to='/'>Technologies</Link>
+              <NavLink className='nav-link' href='#technologies-heading'>Technologies</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className='nav-link' href='#projects-heading'>Projects</NavLink>
             </NavItem>
             { isAdmin && authenticated() }
             {
