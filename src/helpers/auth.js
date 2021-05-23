@@ -1,6 +1,7 @@
 import firebase from 'firebase';
 
 const signInUser = () => {
+  console.warn('signing in');
   const provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithPopup(provider);
 };

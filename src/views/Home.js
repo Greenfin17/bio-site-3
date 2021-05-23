@@ -1,33 +1,20 @@
 // Homes.js
 
 import React from 'react';
-
-import self from '../images/Self.jpg';
 import html from '../graphics/HTML5_Logo.svg';
 import css from '../graphics/css-3.png';
 import javascript from '../graphics/javascript-seeklogo.com.svg';
 import gitHub from '../graphics/Git-Hub.svg';
 
 const Home = () => (
-    <>
-    <nav className='projects-nav' id='top'>
-    <h1 >John Maple</h1>
-    <ul id='navLinks'>
-      <li><a id='navToBio' to='/bioPage/'>Bio</a></li>
-      <li><a id='navToTechnologies' href='/technologiesPage'>Technologies</a></li>
-      <li><a id='navToProjects' href='/projects-heading'>Projects</a></li>
-    </ul>
-    </nav>
-    <section className='portrait'>
-      <img src={self} alt='Image of myself, John Maple' />
-    </section>
-
+    <div className='home-page'>
     <div className='fullPage' id='bioPage'>
     <h2>About Me</h2>
-    <p>I am a musician and long time learner in all things computing. I enjoy the logic of programming and find
-      immersion in code somehow relaxing. As COVID-19 rages and there are no live performances,
-      I have taken the opportunity to enroll at the Nashville Software School. Where this will lead me
-      on a practical level, I do not know. But I will know more in the end!</p>
+    <p>I am a musician and long time learner in all things computing.
+      I enjoy the logic of programming and find immersion in code somehow relaxing.
+      When COVID-19 raged and there were no live performances, I took the opportunity to enroll
+      at the Nashville Software School. As a mountain climber climbs a peak because it is there
+      and must be conquered, when a coding challenge is in front of me, I must figure out a solution and I cannot rest until I have found one.</p>
     </div>
     <div className='fullPage' id='technologiesPage'>
     <h2>Technologies</h2>
@@ -44,7 +31,7 @@ const Home = () => (
     <footer className='page-footer'>
     <div>Icons made by <a href='https://www.flaticon.com/authors/pixel-perfect' title='Pixel perfect'>Pixel perfect</a> from <a href='https://www.flaticon.com/' title='Flaticon'>www.flaticon.com</a></div>
     </footer>`;
-  </>
+  </div>
 );
 
 export default Home;

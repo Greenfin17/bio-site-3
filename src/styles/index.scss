@@ -1,6 +1,97 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import 'variables';
+@import 'HomePage';
+@import 'Navbar';
 
 body {
   background-color: $favColor;
+  margin: 0;
+}
+
+.projects-nav {
+  margin: 2em;
+  display: flex;
+  flex-wrap: wrap;
+}
+section.portrait { 
+  text-align: center;
+}
+.portrait img {
+  height: 300px;
+  border-radius: 10px;
+  width: auto;
+  margin: 140px auto 20px;
+}
+
+li img {
+  height: 35px;
+  width: auto;
+}
+
+h1 {
+  width: 40%;
+  margin-left: 5%;
+}
+
+h2 {
+  text-align: center;
+  margin: 2em 0 2em;
+}
+
+
+#navLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style-type: none;
+  font-size: 1.3em;
+  margin: auto;
+}
+
+#navLinks li {
+  margin: 5px 1em;
+}
+
+.fullPage {
+  margin: 2em 2em;
+}
+
+#technologiesPage {
+}
+
+ul.technologies {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.page-footer {
+  background-color: #333333;
+  color: white;
+  height: 40px;
+}
+
+.project-title {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.img-container {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.page-footer div {
+  margin: 0 4em;
+  text-align: right;
+} 
+
+@media (max-width: 768px) { 
+  h1 {
+    margin: 0 auto 10px;
+    width: auto;
+  }
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/index.scss';
 import firebase from 'firebase';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/index.scss';
 import firebaseConfig from './helpers/apiKeys';
 
 firebase.initializeApp(firebaseConfig);

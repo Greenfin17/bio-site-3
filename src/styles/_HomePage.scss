@@ -1,0 +1,8 @@
+// _HomePage.scss
+$bg-image: url('../images/Colorado-2018.jpg');
+
+.page-top {
+  background-image: $bg-image;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
