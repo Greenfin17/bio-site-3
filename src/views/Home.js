@@ -1,13 +1,14 @@
 // Homes.js
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import html from '../graphics/HTML5_Logo.svg';
 import css from '../graphics/css-3.png';
 import javascript from '../graphics/javascript-seeklogo.com.svg';
 import gitHub from '../graphics/Git-Hub.svg';
 import Projects from '../components/section/Projects';
 
-const Home = () => (
+const Home = ({ projects }) => (
     <div className='home-page'>
     <div className='fullPage' id='bioPage'>
     <h2 id='about-heading'>About Me</h2>
@@ -26,11 +27,15 @@ const Home = () => (
         <li><img src={gitHub} /></li>
       </ul>
     </div>
-    <Projects />
+    <Projects projects={projects} />
     <footer className='page-footer'>
     <div>Icons made by <a href='https://www.flaticon.com/authors/pixel-perfect' title='Pixel perfect'>Pixel perfect</a> from <a href='https://www.flaticon.com/' title='Flaticon'>www.flaticon.com</a></div>
     </footer>`;
   </div>
 );
+
+Home.propTypes = {
+  projects: PropTypes.array
+};
 
 export default Home;

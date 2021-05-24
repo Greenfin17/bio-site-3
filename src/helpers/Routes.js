@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Home from '../views/Home';
 import NotFound from '../views/NotFound';
 import SignIn from '../components/SignIn';
+import EditProjects from '../views/EditProjects';
 
 const AdminRoute = ({ component: Component, user, ...rest }) => {
   const routeChecker = (items) => (user
@@ -17,13 +18,25 @@ AdminRoute.propTypes = {
   user: PropTypes.any
 };
 export default function Routes({
+  user,
   isAdmin,
+  projects,
+  setProjects
 }) {
   return (
     <div>
       <Switch>
-        <Route exact path='/' component={() => <Home /> } />
+        <Route exact path='/' component={() => <Home
+          projects={projects} /> } />
         <Route exact path='/admin_admin' component={() => <SignIn isAdmin={isAdmin} /> } />
+        <AdminRoute
+          exact
+          path='/edit-projects'
+          user={user}
+          component={() => <EditProjects
+            projects={projects}
+            setProjects={setProjects}/>}
+        />
         <Route exact path='/not-found' component={NotFound} />
         <Route path='*' component={NotFound} />
       </Switch>
@@ -32,5 +45,8 @@ export default function Routes({
 }
 
 Routes.propTypes = {
+  user: PropTypes.any,
   isAdmin: PropTypes.bool,
+  projects: PropTypes.array,
+  setProjects: PropTypes.func
 };

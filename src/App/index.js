@@ -43,7 +43,9 @@ function App() {
           setProject={setProjects}
         />
         <Routes user={user}
-          isAdmin={isAdmin} />
+          isAdmin={isAdmin}
+          projects={projects}
+          setProjects={setProjects} />
       </Router>
     </>
   );
