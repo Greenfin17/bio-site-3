@@ -9,7 +9,10 @@ import {
   Input,
   Button
 } from 'reactstrap';
-import { updateProject } from '../../helpers/data/projects';
+import {
+  updateProject, addProject,
+  getProjects, deleteProject
+} from '../../helpers/data/projects';
 
 const ProjectFormElement = style(Form)`
   width: 52rem;
@@ -23,31 +26,48 @@ const DisplayLabel = style(Label)`
 
 const ProjectForm = ({ project, setProjects }) => {
   const [projectObj, setProjectObj] = useState({
-    title: project.title || '',
-    description: project.description || '',
-    firebaseKey: project.firebaseKey || '',
-    technologiesUsed: project.technologiesUsed || '',
-    screenshot: project.screenshot || '',
-    altText: project.altText || '',
-    url: project.url || '',
-    githubUrl: project.githubUrl || '',
-    available: project.available || false,
+    title: project ? project.title : '',
+    description: project ? project.description : '',
+    firebaseKey: project ? project.firebaseKey : '',
+    technologiesUsed: project ? project.technologiesUsed : '',
+    screenshot: project ? project.screenshot : '',
+    altText: project ? project.altText : '',
+    url: project ? project.url : '',
+    githubUrl: project ? project.githubUrl : '',
+    available: project ? project.available : false,
   });
 
   const handleInputChange = (e) => {
-    console.warn(e.target.name);
     setProjectObj((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value
     }));
   };
 
+  const handleShowHide = (e) => {
+    const show = (e.target.value === 'true');
+    setProjectObj((prevState) => ({
+      ...prevState,
+      [e.target.name]: show
+    }));
+  };
+
+  const handleDelete = () => {
+    deleteProject(projectObj.firebaseKey).then(() => getProjects()
+      .then((projectArr) => setProjects(projectArr)));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    updateProject(projectObj.firebaseKey, projectObj).then((projectArr) => {
-      setProjects(projectArr);
-      console.warn(projectObj);
-    });
+    if (project) {
+      updateProject(projectObj.firebaseKey, projectObj).then((projectArr) => {
+        setProjects(projectArr);
+      });
+    } else {
+      addProject(projectObj).then((projectArr) => {
+        setProjects(projectArr);
+      });
+    }
   };
 
   return (
@@ -91,12 +111,14 @@ const ProjectForm = ({ project, setProjects }) => {
       <FormGroup>
         <DisplayLabel for='available'>Display?</DisplayLabel>
         <select name='available' defaultValue={projectObj.available}
-          onChange={handleInputChange} >
-          <option value='true'>Show</option>
-          <option value='false'>Hide</option>
+          onChange={handleShowHide} >
+          <option value={true}>Show</option>
+          <option value={false}>Hide</option>
         </select>
       </FormGroup>
       <Button type='submit'>Submit</Button>
+      <Button type='button' color='danger'
+        onClick={handleDelete}>Delete</Button>
     </ProjectFormElement>
   );
 };

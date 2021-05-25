@@ -5,6 +5,7 @@ import Home from '../views/Home';
 import NotFound from '../views/NotFound';
 import SignIn from '../components/SignIn';
 import EditProjects from '../views/EditProjects';
+import AddProject from '../views/AddProject';
 
 const AdminRoute = ({ component: Component, user, ...rest }) => {
   const routeChecker = (items) => (user
@@ -35,6 +36,13 @@ export default function Routes({
           user={user}
           component={() => <EditProjects
             projects={projects}
+            setProjects={setProjects}/>}
+        />
+        <AdminRoute
+          exact
+          path='/add-project'
+          user={user}
+          component={() => <AddProject
             setProjects={setProjects}/>}
         />
         <Route exact path='/not-found' component={NotFound} />

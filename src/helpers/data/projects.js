@@ -23,6 +23,27 @@ const updateProject = (firebaseKey, projectObj) => new Promise((resolve, reject)
     .catch((error) => reject(error));
 });
 
+const addProject = (projectObj) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/projects.json`, projectObj)
+    .then((response) => {
+      if (response.data) {
+        const keyObj = { firebaseKey: response.data.name };
+        axios.patch(`${dbUrl}/projects/${response.data.name}.json`, keyObj)
+          .then(() => getProjects().then((projectArr) => {
+            resolve(projectArr);
+          }));
+      } else resolve([]);
+    })
+    .catch((error) => reject(error));
+});
+
+const deleteProject = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/projects/${firebaseKey}.json`)
+    .then(() => getProjects().then((projectArr) => resolve(projectArr)))
+    .catch((error) => reject(error));
+});
+
 export {
-  updateProject, getProjects
+  updateProject, getProjects,
+  addProject, deleteProject
 };
