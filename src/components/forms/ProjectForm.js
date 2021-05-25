@@ -1,5 +1,5 @@
 // ProjectForm.js
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import style from 'styled-components';
 import {
@@ -9,6 +9,7 @@ import {
   Input,
   Button
 } from 'reactstrap';
+import { updateProject } from '../../helpers/data/projects';
 
 const ProjectFormElement = style(Form)`
   width: 52rem;
@@ -20,10 +21,11 @@ const DisplayLabel = style(Label)`
   display: block;
 `;
 
-const ProjectForm = ({ project }) => {
+const ProjectForm = ({ project, setProjects }) => {
   const [projectObj, setProjectObj] = useState({
     title: project.title || '',
     description: project.description || '',
+    firebaseKey: project.firebaseKey || '',
     technologiesUsed: project.technologiesUsed || '',
     screenshot: project.screenshot || '',
     altText: project.altText || '',
@@ -32,12 +34,8 @@ const ProjectForm = ({ project }) => {
     available: project.available || false,
   });
 
-  useEffect(() => {
-    console.warn('useEffect()');
-  }, []);
-
   const handleInputChange = (e) => {
-    console.warn(e.target.name, e.target.value);
+    console.warn(e.target.name);
     setProjectObj((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value
@@ -46,8 +44,12 @@ const ProjectForm = ({ project }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.warn(projectObj);
+    updateProject(projectObj.firebaseKey, projectObj).then((projectArr) => {
+      setProjects(projectArr);
+      console.warn(projectObj);
+    });
   };
+
   return (
     <ProjectFormElement onSubmit={handleSubmit}>
       <FormGroup>
@@ -88,7 +90,8 @@ const ProjectForm = ({ project }) => {
       </FormGroup>
       <FormGroup>
         <DisplayLabel for='available'>Display?</DisplayLabel>
-        <select name='available' defaultValue={projectObj.available} >
+        <select name='available' defaultValue={projectObj.available}
+          onChange={handleInputChange} >
           <option value='true'>Show</option>
           <option value='false'>Hide</option>
         </select>
@@ -99,7 +102,8 @@ const ProjectForm = ({ project }) => {
 };
 
 ProjectForm.propTypes = {
-  project: PropTypes.object
+  project: PropTypes.object,
+  setProjects: PropTypes.func
 };
 
 export default ProjectForm;

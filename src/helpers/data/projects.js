@@ -15,4 +15,14 @@ const getProjects = () => new Promise((resolve, reject) => {
     }).catch((error) => reject(error));
 });
 
-export default getProjects;
+const updateProject = (firebaseKey, projectObj) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/projects/${firebaseKey}.json`, projectObj)
+    .then(() => getProjects().then((projectsArr) => {
+      resolve(projectsArr);
+    }))
+    .catch((error) => reject(error));
+});
+
+export {
+  updateProject, getProjects
+};

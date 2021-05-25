@@ -4,7 +4,7 @@ import firebase from 'firebase';
 import firebaseConfig from '../helpers/apiKeys';
 import Routes from '../helpers/Routes';
 import PageTop from '../components/PageTop';
-import getProjects from '../helpers/data/projects';
+import { getProjects } from '../helpers/data/projects';
 
 function App() {
   const [projects, setProjects] = useState([]);
@@ -27,6 +27,7 @@ function App() {
         };
         setUser(userInfoObj);
         setIsAdmin(true);
+        console.warn(authed.uid);
       } else if (user || user === null) {
         setUser(false);
         setIsAdmin(false);
