@@ -27,7 +27,6 @@ function App() {
         };
         setUser(userInfoObj);
         setIsAdmin(true);
-        console.warn(authed.uid);
       } else if (user || user === null) {
         setUser(false);
         setIsAdmin(false);
