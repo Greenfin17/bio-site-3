@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import {
   Navbar,
   Nav,
   NavbarToggler,
   Collapse,
   NavItem,
-  NavLink,
   Button
 } from 'reactstrap';
 import { signOutUser } from '../helpers/auth';
@@ -16,13 +16,8 @@ const NavBar = ({
   isAdmin,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const history = useHistory();
 
   const toggle = () => setIsOpen(!isOpen);
-
-  const handleClick = () => {
-    history.push('#about-me-heading');
-  };
 
   const authenticated = () => (
     <>
@@ -42,14 +37,17 @@ const NavBar = ({
         <Collapse className='bio-nav-collapse' isOpen={isOpen} navbar>
           <Nav className='mr-auto bio-ul' navbar>
             <NavItem>
-              <Link className='nav-link' to='/#about-heading'
-                onClick={handleClick} >About Me</Link>
+              <HashLink className='nav-link'
+                smooth to='/#about-heading'
+                >About Me</HashLink>
             </NavItem>
             <NavItem>
-              <NavLink className='nav-link' href='/#technologies-heading'>Technologies</NavLink>
+              <HashLink className='nav-link'
+                smooth to='/#technologies-heading'>Technologies</HashLink>
             </NavItem>
             <NavItem>
-              <NavLink className='nav-link' href='/#projects-heading'>Projects</NavLink>
+              <HashLink className='nav-link'
+                smooth to='/#projects-heading'>Projects</HashLink>
             </NavItem>
             { isAdmin && authenticated() }
             {
