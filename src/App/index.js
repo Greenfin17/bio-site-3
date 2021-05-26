@@ -5,15 +5,22 @@ import firebaseConfig from '../helpers/apiKeys';
 import Routes from '../helpers/Routes';
 import PageTop from '../components/PageTop';
 import { getProjects } from '../helpers/data/projects';
+// import html from '../graphics/HTML5_Logo.svg';
+// import css from '../graphics/css-3.png';
+// import javascript from '../graphics/javascript-seeklogo.com.svg';
+// import gitHub from '../graphics/Git-Hub.svg';
+import getTechnologies from '../helpers/data/technologies';
 
 function App() {
   const [projects, setProjects] = useState([]);
+  const [techArr, setTechArr] = useState([]);
   const [user, setUser] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
   const adminUid = firebaseConfig.admin;
 
   useEffect(() => {
     getProjects().then((response) => setProjects(response));
+    getTechnologies().then((response) => setTechArr(response));
   }, []);
 
   useEffect(() => {
@@ -46,6 +53,7 @@ function App() {
         <Routes user={user}
           isAdmin={isAdmin}
           projects={projects}
+          techArr={techArr}
           setProjects={setProjects} />
       </Router>
     </>

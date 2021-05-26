@@ -22,13 +22,14 @@ export default function Routes({
   user,
   isAdmin,
   projects,
-  setProjects
+  setProjects,
+  techArr
 }) {
   return (
     <div>
       <Switch>
         <Route exact path='/' component={() => <Home
-          projects={projects} /> } />
+          projects={projects} techArr={techArr} /> } />
         <Route exact path='/admin_admin' component={() => <SignIn isAdmin={isAdmin} /> } />
         <AdminRoute
           exact
@@ -56,5 +57,6 @@ Routes.propTypes = {
   user: PropTypes.any,
   isAdmin: PropTypes.bool,
   projects: PropTypes.array,
-  setProjects: PropTypes.func
+  setProjects: PropTypes.func,
+  techArr: PropTypes.array
 };
