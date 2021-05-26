@@ -9,7 +9,7 @@ import { getProjects } from '../helpers/data/projects';
 // import css from '../graphics/css-3.png';
 // import javascript from '../graphics/javascript-seeklogo.com.svg';
 // import gitHub from '../graphics/Git-Hub.svg';
-import getTechnologies from '../helpers/data/technologies';
+import { getTechnologies } from '../helpers/data/technologies';
 
 function App() {
   const [projects, setProjects] = useState([]);
@@ -32,7 +32,6 @@ function App() {
           uid: authed.uid,
           username: authed.email.split('@')[0]
         };
-        console.warn(authed.uid);
         setUser(userInfoObj);
         setIsAdmin(true);
       } else if (user || user === null) {
@@ -53,8 +52,10 @@ function App() {
         <Routes user={user}
           isAdmin={isAdmin}
           projects={projects}
+          setProjects={setProjects}
           techArr={techArr}
-          setProjects={setProjects} />
+          setTechArr={setTechArr}
+           />
       </Router>
     </>
   );

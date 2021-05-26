@@ -22,6 +22,12 @@ const NavBar = ({
   const authenticated = () => (
     <>
       <NavItem>
+        <Link className='nav-link' to='/add-tech'>Add Tech</Link>
+      </NavItem>
+      <NavItem>
+        <Link className='nav-link' to='/edit-tech'>Edit Tech</Link>
+      </NavItem>
+      <NavItem>
         <Link className='nav-link' to='/add-project'>Add Project</Link>
       </NavItem>
       <NavItem>

@@ -6,6 +6,8 @@ import NotFound from '../views/NotFound';
 import SignIn from '../components/SignIn';
 import EditProjects from '../views/EditProjects';
 import AddProject from '../views/AddProject';
+import EditTech from '../views/EditTech';
+import AddTech from '../views/AddTech';
 
 const AdminRoute = ({ component: Component, user, ...rest }) => {
   const routeChecker = (items) => (user
@@ -23,7 +25,8 @@ export default function Routes({
   isAdmin,
   projects,
   setProjects,
-  techArr
+  techArr,
+  setTechArr
 }) {
   return (
     <div>
@@ -31,6 +34,21 @@ export default function Routes({
         <Route exact path='/' component={() => <Home
           projects={projects} techArr={techArr} /> } />
         <Route exact path='/admin_admin' component={() => <SignIn isAdmin={isAdmin} /> } />
+        <AdminRoute
+          exact
+          path='/add-tech'
+          user={user}
+          component={() => <AddTech
+            setTechArr={setTechArr}/>}
+        />
+        <AdminRoute
+          exact
+          path='/edit-tech'
+          user={user}
+          component={() => <EditTech
+            techArr={techArr}
+            setTechArr={setTechArr}/>}
+        />
         <AdminRoute
           exact
           path='/edit-projects'
@@ -58,5 +76,6 @@ Routes.propTypes = {
   isAdmin: PropTypes.bool,
   projects: PropTypes.array,
   setProjects: PropTypes.func,
-  techArr: PropTypes.array
+  techArr: PropTypes.array,
+  setTechArr: PropTypes.func
 };
