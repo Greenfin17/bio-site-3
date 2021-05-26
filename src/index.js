@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 import firebase from 'firebase';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -8,6 +9,11 @@ import './styles/index.scss';
 import firebaseConfig from './helpers/apiKeys';
 
 firebase.initializeApp(firebaseConfig);
+
+axios.interceptors.request.use = () => new Promise((resolve, reject) => {
+  firebase.auth().currentUser.getIdToken().then((config) => resolve(config.headers.token)
+    .catch((error) => reject(error)));
+});
 
 ReactDOM.render(
   <React.Fragment>

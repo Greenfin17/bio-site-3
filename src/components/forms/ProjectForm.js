@@ -59,6 +59,7 @@ const ProjectForm = ({ project, setProjects }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.warn(project);
     if (project) {
       updateProject(projectObj.firebaseKey, projectObj).then((projectArr) => {
         setProjects(projectArr);

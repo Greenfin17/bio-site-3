@@ -1,9 +1,16 @@
 // projecst.js
 
 import axios from 'axios';
+// import firebase from 'firebase';
 import firebaseConfig from '../apiKeys';
 
 const dbUrl = firebaseConfig.databaseURL;
+/*
+axios.interceptors.request.use = () => new Promise((resolve, reject) => {
+  firebase.auth().currentUser.getIdToken().then((config) => resolve(config.headers.token)
+    .catch((error) => reject(error)));
+});
+*/
 
 const getProjects = () => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/projects.json`)
@@ -16,7 +23,14 @@ const getProjects = () => new Promise((resolve, reject) => {
 });
 
 const updateProject = (firebaseKey, projectObj) => new Promise((resolve, reject) => {
-  axios.patch(`${dbUrl}/projects/${firebaseKey}.json`, projectObj)
+  axios.patch(`${dbUrl}/projects/${firebaseKey}.json`, projectObj, {
+    headers: {
+      provider: 'google',
+      authed: {
+        uid: 'ZrPQw19aW7PxyysLeHFP7eq4vQf1'
+      }
+    }
+  })
     .then(() => getProjects().then((projectsArr) => {
       resolve(projectsArr);
     }))

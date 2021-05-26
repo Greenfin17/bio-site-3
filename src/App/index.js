@@ -25,6 +25,7 @@ function App() {
           uid: authed.uid,
           username: authed.email.split('@')[0]
         };
+        console.warn(authed.uid);
         setUser(userInfoObj);
         setIsAdmin(true);
       } else if (user || user === null) {
