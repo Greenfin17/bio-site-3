@@ -1,0 +1,11 @@
+// _ProjectCard.scss
+
+.card { 
+  margin: 20px 10px;
+  border-radius: 10px;
+}
+
+#projects-section {
+  flex-flow: wrap;
+  justify-content: space-around;
+}

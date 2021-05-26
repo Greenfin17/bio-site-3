@@ -1,0 +1,70 @@
+  {
+    "title" : "Almost Pinterest",
+    "screenshot" : "null",
+    "altText" : "Screen shot of Almost Pinterest project",
+    "description" : "App that allows a user to save nd organize sites into categories",
+    "technologiesUsed" : "HTML, CSS, Javascript, Github for version control",
+    "available" : "true",
+    "url" : "https://friendly-dijkstra-f5e799.netlify.app/",
+    "githubUrl" : "https://github.com/Greenfin17/ASSIGNMENT-Firebase-Pinterest"
+  },
+  {
+    "title" : "Almost Amazon",
+    "screenshot" : "null",
+    "altText" : "Screen shot of Almost Amazon project",
+    "description" : "App that allows a user to track books and authors",
+    "technologiesUsed" : "HTML, CSS, Javascript, Github for version control",
+    "available" : "true",
+    "url" : "https://unruffled-morse-7d9b48.netlify.app/",
+    "githubUrl" : "https://github.com/Greenfin17/IN-CLASS-almost-amazon-template"
+  },
+  {
+    "title" : "Tamagotchi",
+    "screenshot" : "null",
+    "altText" : "Screen shot of Tamagotchi project",
+    "description" : "Game that mimics the Tamagotchi toy of the nineties",
+    "technologiesUsed" : "HTML, CSS, Javascript, Github for version control",
+    "available" : "true",
+    "url" : "https://jm-e-pet-tamagotchi.netlify.app/",
+    "githubUrl" : "https://github.com/Greenfin17/ASSIGNMENT-Tamagotchi"
+  },
+  {
+    "title" : "Bear Watcher",
+    "screenshot" : "null",
+    "altText" : "Screen shot of Bear Watcher project",
+    "description" : "Tool for tracking the fishing activiteis of bears in real time.",
+    "technologiesUsed" : "HTML, CSS, Javascript, Github for version control",
+    "available" : "false",
+    "url" : "https://jm-bear-watcher.netlify.app",
+    "githubUrl" : "https://github.com/Greenfin17/ASSIGNMENT-Bear-Watcher"
+  },
+  {
+    "title" : "Sorting Hat",
+    "screenshot" : "null",
+    "altText" : "Screen shot of Sorting Hat project",
+    "description" : "Mimics the Sorting Hat fo the Harry Potter series",
+    "technologiesUsed" : "HTML, CSS, Javascript, Github for version control",
+    "available" : "false",
+    "url" : "https://jm-hogwarts-sorting-hat.netlify.app",
+    "githubUrl" : "https://github.com/Greenfin17/sorting-hat"
+  },
+  {
+    "title" : "Pet Adoption",
+    "screenshot" : "null",
+    "altText" : "Screen shot of Pet Adoption project",
+    "description" : "Mimics a pet adoption site.",
+    "technologiesUsed" : "HTML, CSS, Javascript, Github for version control",
+    "available" : "false",
+    "url" : "https://jm-pet-adoption.netlify.app/",
+    "githubUrl" : "https://github.com/Greenfin17/pet-adoption"
+  },
+  {
+    "title" : "Ski Shop",
+    "screenshot" : "null",
+    "altText" : "Screen shot of Ski Shop product cards",
+    "description" : "Product display of imaginary ski shop",
+    "technologiesUsed" : "HTML, CSS, Javascript, Github for version control",
+    "available" : "false",
+    "url" : "https://jm-product-cards.netlify.app",
+    "githubUrl" : "https://github.com/Greenfin17/product-cards"
+  }
