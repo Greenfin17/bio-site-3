@@ -17,6 +17,10 @@ ul.bio-ul {
   font-weight: 600;
 }
 
+.navbar-nav {
+  flex-wrap: wrap;
+}
+
 .navbar-nav .nav-link { 
   color: black !important;
   font-weight: 400 !important;
