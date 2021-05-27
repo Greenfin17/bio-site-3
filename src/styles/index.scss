@@ -24,7 +24,7 @@ section.portrait {
   margin: 140px auto 20px;
 }
 
-li img {
+.technologies li img {
   height: 35px;
   width: auto;
 }
@@ -67,6 +67,10 @@ ul.technologies {
   list-style: none;
 }
 
+.technologies li {
+  min-width: 50px;
+  margin: 10px 5px;
+}
 .page-footer {
   background-color: #333333;
   color: white;
