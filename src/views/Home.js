@@ -4,6 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Projects from '../components/section/Projects';
 import Technologies from '../components/section/Technologies';
+import Footer from '../components/section/Footer';
 
 const Home = ({
   projects,
@@ -20,9 +21,7 @@ const Home = ({
     </div>
     <Technologies techArr={techArr} />
     <Projects projects={projects} />
-    <footer className='page-footer'>
-    <div>Icons made by <a href='https://www.flaticon.com/authors/pixel-perfect' title='Pixel perfect'>Pixel perfect</a> from <a href='https://www.flaticon.com/' title='Flaticon'>www.flaticon.com</a></div>
-    </footer>`;
+    <Footer />
   </div>
 );
 

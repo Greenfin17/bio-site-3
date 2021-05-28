@@ -5,6 +5,8 @@
   margin: 20px 10px;
   border-radius: 10px;
   background-color: $favColor;
+  width: 20rem;
+  height: 350px;
   .card-body {
     padding: 0;
   }
@@ -34,14 +36,31 @@
     height: 170px;
   }
 
-  .site-link, .github-link {
-    width: 28px;
+  div.card-links {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+  }
+
+
+  .site-link {
+    width: 24px;
     height: auto;
     margin: 0 10px 10px;
+    display: block;
+    left: 5px;
+    bottom: 5px;
+  }
+  
+  .github-link {
+    width: 24px;
+    height: auto;
+    margin: 0 10px 10px;
+    display: block;
+    right: 5px;
+    bottom: 5px;
   }
 }
-
-
 
 #projects-section {
   flex-flow: wrap;
