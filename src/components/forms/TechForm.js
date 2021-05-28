@@ -34,6 +34,7 @@ const TechForm = ({
     firebaseKey: tech ? tech.firebaseKey : '',
     name: tech ? tech.name : '',
     url: tech ? tech.url : '',
+    techUrl: tech.url ? tech.techUrl : '',
     show: tech ? tech.show : false
   });
 
@@ -80,8 +81,13 @@ const TechForm = ({
       </FormGroup>
       <FormGroup>
         <Label for='url'>Icon URL</Label>
-        <Input type='text' name='url' placeholder='Enter Tech Url'
+        <Input type='text' name='url' placeholder='Enter Tech Icon Url'
           onChange={handleInputChange} value={techObj.url} />
+      </FormGroup>
+      <FormGroup>
+        <Label for='techUrl'>Tech URL</Label>
+        <Input type='text' name='techUrl' placeholder='Enter Tech Url'
+          onChange={handleInputChange} value={techObj.techUrl} />
       </FormGroup>
       <FormGroup>
         <DisplayLabel for='show'>Display?</DisplayLabel>
