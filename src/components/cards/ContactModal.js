@@ -17,7 +17,7 @@ const ContactModal = () => {
     history.push('/');
   };
   return (
-    <Modal id='exampleModal' tabIndex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'
+    <Modal id='contact-modal' tabIndex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'
       isOpen={modal} toggle={toggle}>
       <ModalBody>
         <ContactCard />
