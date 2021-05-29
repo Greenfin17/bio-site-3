@@ -1,0 +1,11 @@
+// _Contact.scss
+
+ul.contact-info {
+  list-style-type: none;
+  padding-inline-start: 5px;
+}
+
+.contact-info i::before {
+  margin: 0 5px 0 0;
+  list-style-type: none;
+}

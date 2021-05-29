@@ -55,6 +55,10 @@ const NavBar = ({
               <HashLink className='nav-link'
                 smooth to='/#projects-heading'>Projects</HashLink>
             </NavItem>
+            <NavItem>
+              <Link className='nav-link'
+                to='/contact'>Contact</Link>
+            </NavItem>
             { isAdmin && authenticated() }
             {
               isAdmin && <NavItem>

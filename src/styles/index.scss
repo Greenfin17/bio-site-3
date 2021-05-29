@@ -3,6 +3,8 @@
 @import 'HomePage';
 @import 'Navbar';
 @import 'ProjectCard';
+@import 'Contact';
+@import 'Footer';
 
 body {
   background-color: $favColor;
@@ -71,11 +73,6 @@ ul.technologies {
   min-width: 50px;
   margin: 10px 5px;
 }
-.page-footer {
-  background-color: #333333;
-  color: white;
-  height: 40px;
-}
 
 .project-title {
   text-align: center;
@@ -88,11 +85,6 @@ ul.technologies {
   background-position: center;
   text-align: center;
 }
-
-.page-footer div {
-  margin: 0 4em;
-  text-align: right;
-} 
 
 @media (max-width: 768px) { 
   h1 {

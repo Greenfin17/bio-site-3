@@ -8,7 +8,7 @@ const Technologies = ({ techArr }) => (
     <ul className='technologies'>
       { techArr.map((item, key) => item.show
       && <li key={key}>
-          <img src={item.url} key={key} /></li>)}
+          <a href={item.techUrl}><img src={item.url} key={key} /></a></li>)}
     </ul>
   </div>
 );

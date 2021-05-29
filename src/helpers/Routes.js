@@ -8,6 +8,7 @@ import EditProjects from '../views/EditProjects';
 import AddProject from '../views/AddProject';
 import EditTech from '../views/EditTech';
 import AddTech from '../views/AddTech';
+import ContactModal from '../components/cards/ContactModal';
 
 const AdminRoute = ({ component: Component, user, ...rest }) => {
   const routeChecker = (items) => (user
@@ -33,6 +34,8 @@ export default function Routes({
       <Switch>
         <Route exact path='/' component={() => <Home
           projects={projects} techArr={techArr} /> } />
+        <Route exact path='/contact'
+          component={() => <ContactModal /> } />
         <Route exact path='/admin_admin' component={() => <SignIn isAdmin={isAdmin} /> } />
         <AdminRoute
           exact
