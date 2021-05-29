@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/admin_admin"
-  status = 200
-  conditions = {Role = ["admin"]}
-  force = true
