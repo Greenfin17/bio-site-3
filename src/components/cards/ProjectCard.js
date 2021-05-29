@@ -8,7 +8,7 @@ const ProjectCard = ({ item }) => (
     <div className='card-body'>
       <p className='card-text project-title'>{item.title}</p>
       <img className='img-container' src={item.screenshot} alt={item.altText} />
-      <p className='card-text technologies'>Technologies: {item.technologiesUsed}</p>
+      <p className='card-text technologies'>{item.description}</p>
       <div className = 'card-links'>
         <ul className='site-link-github'>
         <li className='card-text url'><a href={item.url}>

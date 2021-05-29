@@ -34,7 +34,7 @@ const TechForm = ({
     firebaseKey: tech ? tech.firebaseKey : '',
     name: tech ? tech.name : '',
     url: tech ? tech.url : '',
-    techUrl: tech.url ? tech.techUrl : '',
+    techUrl: tech ? tech.techUrl : '',
     show: tech ? tech.show : false
   });
 
