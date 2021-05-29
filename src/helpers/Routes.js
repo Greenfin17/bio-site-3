@@ -36,7 +36,10 @@ export default function Routes({
           projects={projects} techArr={techArr} /> } />
         <Route exact path='/contact'
           component={() => <ContactModal /> } />
-        <Route exact path='/admin_admin' component={() => <SignIn isAdmin={isAdmin} /> } />
+        <Route exact path='/admin_admin' component={() => <>
+          <SignIn isAdmin={isAdmin} />
+          <Home projects={projects} techArr={techArr} />
+          </> } />
         <AdminRoute
           exact
           path='/add-tech'
