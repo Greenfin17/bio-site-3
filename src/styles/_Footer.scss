@@ -1,12 +1,28 @@
 // _Footer.scss
+@import 'variables';
 
 .page-footer {
   background-color: #333333;
   color: white;
-  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+
+.page-footer a {
+  color: $anchorDarkBackground;
 }
 
 .page-footer div {
-  margin: 0 4em;
-  text-align: right;
+  margin: 0 2%;
 } 
+
+.page-footer ul{
+  list-style-type: none;
+  padding-inline-start: 2%;
+}
+
+.ul-contact-footer i::before {
+  margin: 0 5px 0 0;
+  list-style-type: none;
+}
