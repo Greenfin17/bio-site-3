@@ -12,9 +12,10 @@ https://www.figma.com/file/JSQ73OyC7IXaUGnMIdpFTJ/BioSite?node-id=0%3A1
 https://bio-site-john-maple.netlify.app/
 
 ## Screenshots
-![SC_header](https://user-images.githubusercontent.com/51683901/120073491-21b68280-c05e-11eb-8bb5-65eace30f985.png)
-![SC_header_about](https://user-images.githubusercontent.com/51683901/120073495-254a0980-c05e-11eb-9bb8-116c8e612784.png)
-![SC_header_about_projects](https://user-images.githubusercontent.com/51683901/120073500-28dd9080-c05e-11eb-9d59-b24eeb262fb0.png)
+![SC_header](https://user-images.githubusercontent.com/51683901/120073681-0435e880-c05f-11eb-99b4-e471f11ae0fe.png)
+![SC_header_about](https://user-images.githubusercontent.com/51683901/120073684-09933300-c05f-11eb-8084-5d265d7bda0e.png)
+![SC_technologies](https://user-images.githubusercontent.com/51683901/120073692-11eb6e00-c05f-11eb-9856-ac37fc1981d5.png)
+![SC_projects](https://user-images.githubusercontent.com/51683901/120073698-14e65e80-c05f-11eb-9783-3bd0509f5a14.png)
 
 ## Loom Video
 https://www.loom.com/share/9fbabc7faa954ec59039c8aff8d42ad1
