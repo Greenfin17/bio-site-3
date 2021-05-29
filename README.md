@@ -13,7 +13,7 @@ https://bio-site-john-maple.netlify.app/
 
 ## Screenshots
 ![SC_header](https://user-images.githubusercontent.com/51683901/120073681-0435e880-c05f-11eb-99b4-e471f11ae0fe.png)
-![SC_header_about](https://user-images.githubusercontent.com/51683901/120073684-09933300-c05f-11eb-8084-5d265d7bda0e.png)
+![SC_header_about](https://user-images.githubusercontent.com/51683901/120073798-84f4e480-c05f-11eb-9236-095345e6583a.png)
 ![SC_technologies](https://user-images.githubusercontent.com/51683901/120073692-11eb6e00-c05f-11eb-9856-ac37fc1981d5.png)
 ![SC_projects](https://user-images.githubusercontent.com/51683901/120073698-14e65e80-c05f-11eb-9783-3bd0509f5a14.png)
 
