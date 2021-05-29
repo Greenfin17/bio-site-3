@@ -12,7 +12,11 @@ const Footer = () => (
       <li><i className='fab fa-linkedin-in'></i>
         <a href='https://www.linkedin.com/in/john-maple-84590643'>LinkedIn</a></li>
     </ul>
-    <div>Icons made by <a href='https://www.flaticon.com/authors/pixel-perfect' title='Pixel perfect'>Pixel perfect</a> from <a href='https://www.flaticon.com/' title='Flaticon'>www.flaticon.com</a></div>
+    <div className='footer-flaticon'>
+      <div className='flaticon'>
+        Icons made by <a href='https://www.flaticon.com/authors/pixel-perfect' title='Pixel perfect'>Pixel perfect</a> from <a href='https://www.flaticon.com/' title='Flaticon'>www.flaticon.com</a>
+      </div>
+    </div>
   </footer>
 );
 

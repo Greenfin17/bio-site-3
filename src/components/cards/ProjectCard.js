@@ -12,9 +12,9 @@ const ProjectCard = ({ item }) => (
       <div className = 'card-links'>
         <ul className='site-link-github'>
         <li className='card-text url'><a href={item.url}>
-            Site Link<img className='site-link' src='https://storage.cloud.google.com/tech-bucket/link.png' /></a></li>
+            Site Link<img className='site-link' src='https://storage.googleapis.com/tech-bucket/link.png' /></a></li>
         <li className='card-text githubUrl'><a href={item.githubUrl}>
-            GitHub<img className='github-link' src='https://storage.cloud.google.com/tech-bucket/Git-Hub.svg' /></a></li>
+            GitHub<img className='github-link' src='https://storage.googleapis.com/tech-bucket/Git-Hub.svg' /></a></li>
         </ul>
       </div>
     </div>
