@@ -1,4 +1,5 @@
 // PageTop.js
+// Adjusting for branch commented-code2
 
 import React from 'react';
 import PropTypes from 'prop-types';
