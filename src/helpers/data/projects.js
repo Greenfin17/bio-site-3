@@ -5,6 +5,12 @@ import axios from 'axios';
 import firebaseConfig from '../apiKeys';
 
 const dbUrl = firebaseConfig.databaseURL;
+/*
+axios.interceptors.request.use = () => new Promise((resolve, reject) => {
+  firebase.auth().currentUser.getIdToken().then((config) => resolve(config.headers.token)
+    .catch((error) => reject(error)));
+});
+*/
 
 const getProjects = () => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/projects.json`)
