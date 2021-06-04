@@ -18,4 +18,4 @@ https://bio-site-john-maple.netlify.app/
 ![SC_projects](https://user-images.githubusercontent.com/51683901/120073698-14e65e80-c05f-11eb-9783-3bd0509f5a14.png)
 
 ## Loom Video
-https://www.loom.com/share/9fbabc7faa954ec59039c8aff8d42ad1
+https://www.loom.com/share/b3dd46964edf45aa8645c21a8bf701c4
